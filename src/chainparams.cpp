@@ -70,7 +70,7 @@ static CBlock CreateDevNetGenesisBlock(const uint256 &prevBlockHash, const std::
  * transaction cannot be spent since it did not originally exist in the
  * database.
  *
- * CBlock(hash=00000ffd590b14, ver=1, hashPrevBlock=00000000000000, hashMerkleRoot=e0028e, nTime=1545249646, nBits=1e0ffff0, nNonce=970215, vtx=1)
+ * CBlock(hash=00000ffd590b14, ver=1, hashPrevBlock=00000000000000, hashMerkleRoot=e0028e, nTime=1556916797, nBits=1e0ffff0, nNonce=970215, vtx=1)
  *   CTransaction(hash=e0028e, ver=1, vin.size=1, vout.size=1, nLockTime=0)
  *     CTxIn(COutPoint(000000, -1), coinbase 04ffff001d01044c5957697265642030392f4a616e2f3230313420546865204772616e64204578706572696d656e7420476f6573204c6976653a204f76657273746f636b2e636f6d204973204e6f7720416363657074696e6720426974636f696e73)
  *     CTxOut(nValue=50.00000000, scriptPubKey=0xA9037BAC7050C479B121CF)
@@ -78,7 +78,7 @@ static CBlock CreateDevNetGenesisBlock(const uint256 &prevBlockHash, const std::
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "News 19 12 2018 Brits Are Replacing Cable TV With This New HDTV";
+    const char* pszTimestamp = "News 03 05 2019 Scott is annoyed with resetting chain";
     const CScript genesisOutputScript = CScript() << ParseHex("04380eb7b025c3f5f7980b889b979f16942c6140517764237f15fd2b6319fc28c396be171358138682d4a46a3882682e048d6cdfea6c9dea86435aa174e9da22ed") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
@@ -127,7 +127,7 @@ public:
         consensus.nMasternodePaymentsStartBlock = 10; // not true, but it's ok as long as it's less then nMasternodePaymentsIncreaseBlock
         consensus.nMasternodePaymentsIncreaseBlock = 158000; // actual historical value
         consensus.nMasternodePaymentsIncreasePeriod = 576*30; // 17280 - actual historical value
-        consensus.nInstantSendConfirmationsRequired = 6;
+        consensus.nInstantSendConfirmationsRequired = 5;
         consensus.nInstantSendKeepLock = 24;
         consensus.nBudgetPaymentsStartBlock = 328008; // actual historical value
         consensus.nBudgetPaymentsCycleBlocks = 16616; // ~(60*24*30)/2.6, actual number of blocks per month is 200700 / 12 = 16725
@@ -194,7 +194,7 @@ public:
         nDefaultPort = 4772;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1545249646, 970215, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1556916797, 970215, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         // calculate main genesis block
         //consensus.hashGenesisBlock = uint256S("0x00");
@@ -221,7 +221,7 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0xf5ddebfcb6042e4210e3c050b612ffeb6b509d9deb4a0f41587dcd870d34e5b9"));
 
 
-        vSeeds.push_back(CDNSSeedData("homenode.btctech.co.uk", "homenode.btctech.co.uk"));
+        vSeeds.push_back(CDNSSeedData("node.btctech.co.uk", "node.btctech.co.uk"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,25);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,25);
@@ -254,7 +254,7 @@ public:
         };
 
         chainTxData = ChainTxData{
-            1545249646, // * UNIX timestamp of last known number of transactions
+            1556916797, // * UNIX timestamp of last known number of transactions
             0,    // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
             0         // * estimated number of transactions per second after that timestamp
