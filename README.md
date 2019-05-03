@@ -3,7 +3,7 @@ Blockcoin Core staging tree 0.12.3
 
 `master:` [![Build Status](https://travis-ci.org/blockcoinpay/blockcoin.svg?branch=master)](https://travis-ci.org/blockcoinpay/blockcoin) `develop:` [![Build Status](https://travis-ci.org/blockcoinpay/blockcoin.svg?branch=develop)](https://travis-ci.org/blockcoinpay/blockcoin/branches)
 
-https://www.blockcoin.org
+http://btctech.co.uk/
 
 
 What is Blockcoin?
@@ -16,7 +16,7 @@ are carried out collectively by the network. Blockcoin Core is the name of the o
 source software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Blockcoin Core software, see https://www.blockcoin.org/get-blockcoin/.
+the Blockcoin Core software, see http://www.btctech.co.uk/knowledgebase/4/Blockcoin
 
 
 License
@@ -29,7 +29,7 @@ Development Process
 -------------------
 
 The `master` branch is meant to be stable. Development is normally done in separate branches.
-[Tags](https://github.com/blockcoinpay/blockcoin/tags) are created to indicate new official,
+[Tags](https://github.com/BTC-Tech/blockcoin/tags) are created to indicate new official,
 stable release versions of Blockcoin Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
@@ -61,17 +61,3 @@ Changes should be tested by somebody other than the developer who wrote the
 code. This is especially important for large or high-risk changes. It is useful
 to add a test plan to the pull request description if testing the changes is
 not straightforward.
-
-Translations
-------------
-
-Changes to translations as well as new translations can be submitted to
-[Blockcoin Core's Transifex page](https://www.transifex.com/projects/p/blockcoin/).
-
-Translations are periodically pulled from Transifex and merged into the git repository. See the
-[translation process](doc/translation_process.md) for details on how this works.
-
-**Important**: We do not accept translation changes as GitHub pull requests because the next
-pull from Transifex would automatically overwrite them again.
-
-Translators should also follow the [forum](https://www.blockcoin.org/forum/topic/blockcoin-worldwide-collaboration.88/).
