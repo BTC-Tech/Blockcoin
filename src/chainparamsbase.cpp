@@ -34,7 +34,7 @@ class CBaseMainParams : public CBaseChainParams
 public:
     CBaseMainParams()
     {
-        nRPCPort = 4771;
+        nRPCPort = 4661;
     }
 };
 static CBaseMainParams mainParams;
@@ -47,7 +47,7 @@ class CBaseTestNetParams : public CBaseChainParams
 public:
     CBaseTestNetParams()
     {
-        nRPCPort = 14771;
+        nRPCPort = 14661;
         strDataDir = "testnet3";
     }
 };
@@ -61,7 +61,7 @@ class CBaseDevNetParams : public CBaseChainParams
 public:
     CBaseDevNetParams(const std::string &dataDir)
     {
-        nRPCPort = 14771;
+        nRPCPort = 14661;
         strDataDir = dataDir;
     }
 };
