@@ -1,0 +1,6 @@
+usr/local/bin/blockcoin-qt usr/bin
+share/pixmaps/blockcoin32.xpm usr/share/pixmaps
+share/pixmaps/blockcoin16.xpm usr/share/pixmaps
+share/pixmaps/blockcoin128.png usr/share/pixmaps
+debian/blockcoin-qt.desktop usr/share/applications
+debian/blockcoin-qt.protocol usr/share/kde4/services/
