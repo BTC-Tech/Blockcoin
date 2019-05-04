@@ -1,4 +1,0 @@
-qt/qt_libblockcoinqt_a-qrc_blockcoin.o: qt/qrc_blockcoin.cpp \
- /usr/include/stdc-predef.h
-
-/usr/include/stdc-predef.h:
